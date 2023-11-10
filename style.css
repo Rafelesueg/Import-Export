@@ -1,3 +1,6 @@
+*{
+    font-family: "Montserrat", sans-serif;
+}
 body{
     background-color: #bbc3cc;
     font-family: "Montserrat", sans-serif;
@@ -31,6 +34,14 @@ header .shopping span{
     left: 80%;
     padding: 3px 10px;
 }
+#groupDropdown {
+    font-size: 14px;
+    padding: 8px;
+    border: 1px solid #ddd;  /* Aggiungi un bordo sottile */
+    border-radius: 4px;     /* Aggiungi angoli arrotondati */
+    width: 150px;           /* Imposta la larghezza desiderata */
+}
+
 .list{
     display: grid;
     grid-template-columns: repeat(3, 1fr);

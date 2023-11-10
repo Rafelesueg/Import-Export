@@ -24,47 +24,108 @@ let products = [
     {
         id: 1,
         name: 'Rame',
-        price: 5
+        price: 5,
+        group: 'metalli'
     },
     {
         id: 2,
         name: 'Ferro',
-        price: 5
+        price: 5,
+        group: 'metalli'
     },
     {
         id: 3,
         name: 'Stagno',
-        price: 5
+        price: 5,
+        group: 'metalli'
     },
     {
         id: 4,
         name: 'Pietra',
-        price: 5
+        price: 5,
+        group: 'metalli'
     },
     {
         id: 5,
         name: 'Sabbia',
-        price: 5
+        price: 5,
+        group: 'metalli'
     },
     {
         id: 6,
         name: 'Grafite',
-        price: 5
-    }
+        price: 5,
+        group: 'metalli'
+    },
+    {
+        id: 7,
+        name: 'Item1',
+        price: 5,
+        group: 'altro'
+    },
+    {
+        id: 8,
+        name: 'Item2',
+        price: 5,
+        group: 'altro'
+    },
+    {
+        id: 9,
+        name: 'Item3',
+        price: 5,
+        group: 'altro'
+    },
+    {
+        id: 10,
+        name: 'Item4',
+        price: 5,
+        group: 'altro'
+    },
+    {
+        id: 11,
+        name: 'Walkman',
+        price: 5,
+        group: 'metaldetector'
+    },
+    {
+        id: 12,
+        name: 'Chiave Inglese',
+        price: 5,
+        group: 'metaldetector'
+    },
+    {
+        id: 13,
+        name: 'Bullone',
+        price: 5,
+        group: 'metaldetector'
+    },
+    {
+        id: 14,
+        name: 'Pistola',
+        price: 5,
+        group: 'metaldetector'
+    },
 ];
+
 let listCards  = [];
-function initApp(){
-    products.forEach((value, key) =>{
+function initApp() {
+    products.forEach((value, key) => {
         let newDiv = document.createElement('div');
         newDiv.classList.add('item');
+        newDiv.setAttribute('data-group', value.group);
         newDiv.innerHTML = `
             <div class="title">${value.name}</div>
             <span>$</span>
             <input type="number" class="priceInput" id="priceInput-${key}" placeholder="" value="${value.price}">
             <button onclick="addToCard(${key})">Aggiungi</button>`;
         list.appendChild(newDiv);
-    })
+    });
+    filterByGroup();
 }
+
+
+
+
 
 initApp();
 function addToCard(key) {
@@ -75,6 +136,34 @@ function addToCard(key) {
     }
     reloadCard();
 }
+
+function filterByGroup() {
+    let groupDropdown = document.getElementById('groupDropdown');
+    let selectedGroup = groupDropdown.value;
+
+    // Mostra tutti gli elementi
+    Array.from(list.children).forEach((item) => {
+        item.style.display = 'block';
+    });
+
+    // Nascondi gli elementi che non appartengono al gruppo selezionato
+    if (selectedGroup !== 'all') {
+        Array.from(list.children).forEach((item) => {
+            // Modifica questa riga per ottenere il gruppo dall'elemento corretto
+            let itemGroup = item.getAttribute('data-group').toLowerCase();
+
+            if (itemGroup !== selectedGroup) {
+                item.style.display = 'none';
+            }
+        });
+    }
+
+    // Ricarica la lista del carrello dopo aver filtrato
+    reloadCard();
+}
+
+
+
 
 
 function reloadCard() {
