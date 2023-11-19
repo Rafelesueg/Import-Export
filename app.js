@@ -21,12 +21,12 @@ resetShopping.addEventListener('click', ()=>{
 })
 
 let products = [
-    { id: 1, name: 'Rame', price: 5, group: 'metalli' },
-    { id: 2, name: 'Ferro', price: 5, group: 'metalli' },
-    { id: 3, name: 'Stagno', price: 4.5, group: 'metalli' },
+    { id: 1, name: 'Rame', price: 2.5, group: 'metalli' },
+    { id: 2, name: 'Ferro', price: 2.5, group: 'metalli' },
+    { id: 3, name: 'Stagno', price: 2.5, group: 'metalli' },
     { id: 4, name: 'Roccia', price: 3, group: 'metalli' },
     { id: 5, name: 'Sabbia', price: 3, group: 'metalli' },
-    { id: 6, name: 'Grafite', price: 5, group: 'metalli' },
+    { id: 6, name: 'Grafite', price: 2.5, group: 'metalli' },
     { id: 7, name: 'Radio', price: 60, group: 'altro' },
     { id: 8, name: 'AudioCassetta', price: 1.5, group: 'altro' },
     { id: 9, name: 'Polaroid', price: 5, group: 'altro' },
