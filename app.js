@@ -130,7 +130,8 @@ let products = [
     { id: 107, name: 'Copertone di fabbrica', price: 10, group: 'auto' },
     { id: 108, name: 'Chiave inglese', price: 2.5, group: 'auto' },
     { id: 109, name: 'Pistola termica', price: 10, group: 'auto' },
-    { id: 110, name: 'Vernice per veicoli', price: 10, group: 'auto' }  
+    { id: 110, name: 'Vernice per veicoli', price: 10, group: 'auto' },
+    { id: 111, name: 'Vernice per veicoli', price: 10, group: 'metaldetector' }   
 ];
 
 let listCards  = [];
