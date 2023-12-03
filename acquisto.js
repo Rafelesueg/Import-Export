@@ -71,7 +71,7 @@ let products = [
     { id: 48, name: 'Piccone in Ferro', price: 40, group: 'metalli' },
     { id: 49, name: 'Piccone in Ferro avanzato', price: 70, group: 'metalli' },
     { id: 50, name: 'Piccone in Oro', price: 200, group: 'metalli' },
-    { id: 51, name: 'Piccone in Pietra', price: 200, group: 'metalli' },
+    { id: 51, name: 'Piccone in Pietra', price: 20, group: 'metalli' },
     { id: 52, name: 'Anello con diamanti ($800-$1000)', price: 800, group: 'rari' },
     { id: 53, name: 'Anello in oro ($400-$600)', price: 400, group: 'rari' },
     { id: 54, name: 'Bracciale in oro ($500-$700)', price: 500, group: 'rari' },
